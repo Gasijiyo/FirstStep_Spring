@@ -1,5 +1,7 @@
 package com.pysstudy.learnspringframework;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {
@@ -20,7 +22,11 @@ public class App02HelloWorldSpring {
 		System.out.println(context.getBean("person3Parameters"));
 		System.out.println(context.getBean("주소"));
 		System.out.println(context.getBean("address3"));
-//		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Person.class));
+		System.out.println(context.getBean("person5Qualifier"));
+		
+//		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 	} 
 
 }
